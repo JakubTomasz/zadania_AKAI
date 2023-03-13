@@ -16,7 +16,7 @@ def get_currency_ratio(base_currency, target_currency, tries=4):
             response_json_output = requests.get(url).json()
             if response_json_output['success']:
                 if response_json_output['info']['rate'] is None:
-                    response_json_output['info']['rate']=0
+                    response_json_output['info']['rate'] = 0
                 return {
                     "base_currency": response_json_output['query']['from'],
                     "target_currency": response_json_output['query']['to'],
@@ -37,7 +37,8 @@ def dump_json_to_file(data, ratios=ratios_file):
     json.dump(data, file, indent=4)
     file.close()
 
-def change_exchange_in_ratios(base_currency, target_currency,exchange,data):
+
+def change_exchange_in_ratios(base_currency, target_currency, exchange, data):
     if exchange["date_fetched"] == str(date.today()):
         return exchange["ratio"]
     new_exchange = get_currency_ratio(base_currency, target_currency)
@@ -46,9 +47,13 @@ def change_exchange_in_ratios(base_currency, target_currency,exchange,data):
     exchange.update(new_exchange)
     dump_json_to_file(data)
     return new_exchange["ratio"]
+
+
 def convert_currency(base_currency, target_currency, amount=1):
     ratios = None
-    data=None
+    data = None
+    if not os.path.isfile(ratios_file):
+        dump_json_to_file([])
     for i in range(2):
         try:
             ratios = open(ratios_file, "r")
@@ -68,10 +73,10 @@ def convert_currency(base_currency, target_currency, amount=1):
 
     for exchange in data:
         if base_currency == exchange["base_currency"] and target_currency == exchange["target_currency"]:
-            return amount * change_exchange_in_ratios(base_currency, target_currency, exchange,data)
+            return amount * change_exchange_in_ratios(base_currency, target_currency, exchange, data)
         # I assume the ratio between currecies is an invers (PLN->EUR_ratio == 1 / EUR->PLN_ratio)
         if base_currency == exchange["target_currency"] and target_currency == exchange["base_currency"]:
-            return amount / change_exchange_in_ratios(base_currency, target_currency, exchange,data)
+            return amount / change_exchange_in_ratios(base_currency, target_currency, exchange, data)
     new_exchange = get_currency_ratio(base_currency, target_currency)
     if new_exchange == {}:
         return 0
@@ -79,13 +84,14 @@ def convert_currency(base_currency, target_currency, amount=1):
     dump_json_to_file(data)
     return amount * new_exchange["ratio"]
 
-if __name__ == "__main__" and len(sys.argv)==4:
-    converted_amount=0
-    #print(sys.argv[2], sys.argv[3], sys.argv[1])
+
+
+if __name__ == "__main__" and len(sys.argv) == 4:
+    converted_amount = 0
+    # print(sys.argv[2], sys.argv[3], sys.argv[1])
     try:
-        converted_amount=convert_currency(sys.argv[2], sys.argv[3], float(sys.argv[1]))
+        converted_amount = convert_currency(sys.argv[2], sys.argv[3], float(sys.argv[1]))
     except:
         pass
     print(f"{sys.argv[1]} {sys.argv[2]} = {converted_amount} {sys.argv[3]}")
-
 
