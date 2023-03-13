@@ -4,5 +4,17 @@
         "target_currency": "EUR",
         "date_fetched": "2023-03-13",
         "ratio": 0.933824
+    },
+    {
+        "base_currency": "PLN",
+        "target_currency": "EUR",
+        "date_fetched": "2023-03-13",
+        "ratio": 0.213461
+    },
+    {
+        "base_currency": "PLN",
+        "target_currency": "USD",
+        "date_fetched": "2023-03-13",
+        "ratio": 0.228588
     }
 ]
