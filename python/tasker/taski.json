@@ -1,14 +1,18 @@
 [
-  {
-    "content": "pokroić mięso",
-    "done": false
-  },
-  {
-    "content": "przebrać spodnie",
-    "done": false
-  },
-  {
-    "content": "nakarmić psa",
-    "done": true
-  }
+ {
+  "content": "pokroi\u0107 mi\u0119so",
+  "done": true
+ },
+ {
+  "content": "przebra\u0107 spodnie",
+  "done": false
+ },
+ {
+  "content": "nakarmi\u0107 psa",
+  "done": true
+ },
+ {
+  "content": "zrobi\u0107 zadanie tasker",
+  "done": true
+ }
 ]
