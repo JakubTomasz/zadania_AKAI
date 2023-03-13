@@ -1,3 +1,3 @@
 Word-rank zrobiony  
-currency converter jest zrobiony ale od podstaw  
-tasker do zrobienia  
+currency converter jest zrobiony ale od podstaw
+tasker zrobiony
