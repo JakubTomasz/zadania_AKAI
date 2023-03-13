@@ -1,0 +1,80 @@
+[
+    {
+        "base_currency": "PLN",
+        "target_currency": "EUR",
+        "date_fetched": "2023-03-13",
+        "ratio": 0.213461
+    },
+    {
+        "base_currency": "USD",
+        "target_currency": "EUR",
+        "date_fetched": "2023-03-13",
+        "ratio": 0.933824
+    },
+    {
+        "base_currency": "PLN",
+        "target_currency": "USD",
+        "date_fetched": "2023-03-13",
+        "ratio": 0.228588
+    },
+    {
+        "base_currency": "KRP",
+        "target_currency": "PLN",
+        "date_fetched": "2023-03-13",
+        "ratio": 4.685731
+    },
+    {
+        "base_currency": "WWW",
+        "target_currency": "PLN",
+        "date_fetched": "2023-03-13",
+        "ratio": 4.685731
+    },
+    {
+        "base_currency": "",
+        "target_currency": "PLN",
+        "date_fetched": "2023-03-13",
+        "ratio": 4.684696
+    },
+    {
+        "base_currency": "FDSFDSDFS",
+        "target_currency": "PLN",
+        "date_fetched": "2023-03-13",
+        "ratio": 4.685731
+    },
+    {
+        "base_currency": "FDSFDSDFSZZZZZZ",
+        "target_currency": "PLN",
+        "date_fetched": "2023-03-13",
+        "ratio": 4.685731
+    },
+    {
+        "base_currency": "FDSFDSDFSZZZZZZ",
+        "target_currency": "DSAASA",
+        "date_fetched": "2023-03-13",
+        "ratio": null
+    },
+    {
+        "base_currency": "FDSFDSDFSZZZZZZ",
+        "target_currency": "DSAASA",
+        "date_fetched": "2023-03-13",
+        "ratio": 0
+    },
+    {
+        "base_currency": "FDSFDSDFSZZZZZZ",
+        "target_currency": "DSAASA",
+        "date_fetched": "2023-03-13",
+        "ratio": 0
+    },
+    {
+        "base_currency": "FDSFDSDFSZZZZZZ",
+        "target_currency": "DSAASA",
+        "date_fetched": "2023-03-13",
+        "ratio": 0
+    },
+    {
+        "base_currency": "FDSFDSDFSZZZZZZ",
+        "target_currency": "DSAASA",
+        "date_fetched": "2023-03-13",
+        "ratio": 0
+    }
+]
